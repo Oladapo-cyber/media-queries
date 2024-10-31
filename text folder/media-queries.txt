@@ -1,0 +1,78 @@
+Question: Using media queries and what sizes to use when styling the font size of a div when the breakpoint is set to a mobile phone.
+
+--understanding and knowing the breakpoints of each and every possible device.
+
+out to   to check out the 
+
+
+
+
+//Below are the different media queries based on device types:
+--Mobile Devices: 319px - 480px
+--Ipads and Tablets: 481px - 1200px
+--Laptops: 1201px - 1600px
+--Desktops: 1601px and more
+
+With media queries, when it's set to max-width; it basically means anything from the max width set and below, the style set in the media queries is the one to use. i.e anything smaller or equal to the max width set.
+
+But when min-width is set it simply means anything from the wdith set and above, the style defined should be applied. ie anything equal to or more than the max width.
+
+/* The minimum width is used to set styles starting from the screen size set and above */
+ @media (min-width: 600px){
+    body{
+        background-color: blueviolet;
+    }
+}
+/* The maximum width is used to set styles from the screen size set and below. ie if 900px is provided as the maximum width, the styles set within this media query would apply from 0 up until it reaches 900px. */
+@media (max-width: 900px){
+    body{
+        background-color: chartreuse;
+    }
+}
+
+
+
+
+***When you think about the total possible screen size, for example from 0 to 2400px; and you have a screen of only 600px, then you can use the max-width to target the backward direction <--. but if you want to target all the screens that are bigger; you can use the min-width to target all the screens in the forward direction-->.
+
+
+--You can also combine different breakpoints, to target something that is of a specific size using the and keyword to set more than one media query on a screen. E.g a screen between 600px and 900px; you set the min width to 600px and the max width to 900px.
+/* Everything below was just example code and code that I wrote so not all might be correct. */
+/* @media (min-width: 319px) and (max-width: 418px){
+    body{
+        background-color: lightsalmon;
+    }
+}
+
+@media (min-width:481px) and (max-width: 1200px){
+    body{
+        background-color: powderblue;
+    }
+}
+ */
+/* In this case we're saying anything that is bigger than 600px using the minimum width. And anything that's less than 900px using the maximum width. So with this set, anything that's inbetween these 2 points is where your specific style would be applied.*/
+/* @media (min-width: 600px) and (max-width: 900px){
+    body{
+        background-color: black;
+    }
+}
+ */
+
+/* The minimum width is used to set styles starting from the screen size set and above */
+/*  @media (min-width: 600px){
+    body{
+        background-color: blueviolet;
+    }
+} */
+/* The maximum width is used to set styles from the screen size set and below. ie if 900px is provided as the maximum width, the styles set within this media query would apply from 0 up until it reaches 900px. */
+/* @media (max-width: 900px){
+    body{
+        background-color: chartreuse;
+    }
+} */
+
+
+
+
+
+**In addition to max-width and min-width, there's also a screen keyword which isn't necessary by default because it's going to apply to all screens, but if we think about an alternative to screen is a keyword called print. And it allows you to use the media query to target only when your website is being printed and to give it a different layout. It's not recommended to use the screen keyword when you're just writing a normal media query, but when one sees it somewhere it's good to know what it is.

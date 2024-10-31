@@ -1,0 +1,69 @@
+
+/*TODO: Change the background color for each device
+--[Lightsalmon] Mobile Devices: 319px - 480px
+--[Powderblue] Ipads and Tablets: 481px - 1200px
+--[Limegreen] Laptops: 1201px - 1600px
+--[Seagreen] Desktops: 1601px and more */
+
+body{
+    background-color: aquamarine;
+}
+
+@media (min-width: 319px) and (max-width: 480px){
+    body{
+        background-color: lightsalmon;
+    }
+}
+
+@media (min-width: 481px) and (max-width:1200px){
+    body{
+        background-color: powderblue;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1600px){
+    body{
+        background-color: limegreen;
+    }
+}
+
+@media (min-width: 1601px){
+    body{
+        background-color: seagreen;
+    }
+}
+
+
+/* Everything below was just example code and code that I wrote so not all might be correct. */
+/* @media (min-width: 319px) and (max-width: 418px){
+    body{
+        background-color: lightsalmon;
+    }
+}
+
+@media (min-width:481px) and (max-width: 1200px){
+    body{
+        background-color: powderblue;
+    }
+}
+ */
+/* In this case we're saying anything that is bigger than 600px using the minimum width. And anything that's less than 900px using the maximum width. So with this set, anything that's inbetween these 2 points is where your specific style would be applied.*/
+/* @media (min-width: 600px) and (max-width: 900px){
+    body{
+        background-color: black;
+    }
+}
+ */
+
+/* The minimum width is used to set styles starting from the screen size set and above */
+/*  @media (min-width: 600px){
+    body{
+        background-color: blueviolet;
+    }
+} */
+/* The maximum width is used to set styles from the screen size set and below. ie if 900px is provided as the maximum width, the styles set within this media query would apply from 0 up until it reaches 900px. */
+/* @media (max-width: 900px){
+    body{
+        background-color: chartreuse;
+    }
+} */
